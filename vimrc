@@ -19,13 +19,15 @@
     set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 " custom mappings
     let mapleader = ","
+        nnoremap <silent> <leader>c :nohlsearch<CR>
         nnoremap <silent> <leader>l :set list!<CR>
+        nnoremap <silent> <leader>p :set paste!<CR>
         nnoremap <silent> <leader>s :set spell!<CR>
         nnoremap <silent> <leader>t :tabnew<CR>
-        nnoremap <silent> <leader><space> :nohlsearch<CR>
+        nnoremap <silent> <leader>w :set wrap!<CR>
     nnoremap ; :
     nnoremap <silent> <Tab> :tabn<CR>
 " miscellaneous settings
-    set autoread cmdheight=2 encoding=utf-8 number ruler showcmd showmode spell spellfile=~/.spell.en.add ttyfast wildmenu wrap
+    set autoread cmdheight=2 encoding=utf-8 number ruler showcmd showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
 " unused settings
     "set linebreak
