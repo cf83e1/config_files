@@ -1,19 +1,19 @@
 set nocompatible
 set modelines=0
-" filetype and syntax
+" Filetype and syntax
     filetype plugin indent on
     syntax on
-" show invisible characters
+" Show invisible characters
     set list listchars=eol:$,nbsp:_,tab:>\ ,trail:@
-" searching options
+" Searching options
     set hlsearch ignorecase incsearch showmatch smartcase
-" movement
+" Movement
     nnoremap j gj
     nnoremap k gk
-" indenting
+" Indenting
     set autoindent smartindent
     set expandtab shiftwidth=4 softtabstop=4 tabstop=4
-" custom mappings
+" Custom mappings
     let mapleader=","
         nnoremap <silent> <leader><space> :nohlsearch<CR>
         nnoremap <silent> K <C-^>
@@ -24,10 +24,27 @@ set modelines=0
         nnoremap <silent> <leader>w :set wrap!<CR>
     nnoremap ; :
     nnoremap <silent> <tab> :tabn<CR>
-" custom commands
-    :command -bang WQ wq<bang>
-    :command -bang Wq wq<bang>
-    :command -bang W w<bang>
-    :command -bang Q q<bang>
-" other options
+" Commands and abbreviations to allow things like :WQ!<CR> and :Wq
+" file.txt<CR>. Using commands alone is not enough when files are
+" specified because of 'E488: Trailing characters'. However, using
+" abbreviations alone does not cover all cases either because they do
+" not convert words unless there is a trailing space or bang. (So
+" :WQ<CR> would not work with just abbreviations.) Using both commands
+" and abbreviations solves the problem for all cases.
+    " Commands
+    " These allow for things like :WQ<CR> and :Q!<CR>
+        :command -bang Q q<bang>
+        :command -bang W w<bang>
+        :command -bang Wq wq<bang>
+        :command -bang WQ wq<bang>
+    " Abbreviations
+    " These allow for things like :W file.txt<CR> and
+    " :WQ! file.txt<CR>
+        cnoreabbrev q1 q
+        cnoreabbrev Q q
+        cnoreabbrev W w
+        cnoreabbrev Wq wq
+        cnoreabbrev WQ wq
+        cnoreabbrev wQ wq
+" Other options
     set autoread cmdheight=2 encoding=utf-8 number ruler showcmd showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
