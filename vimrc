@@ -47,4 +47,5 @@ set modelines=0
         cnoreabbrev WQ wq
         cnoreabbrev wQ wq
 " Other options
-    set autoread cmdheight=2 encoding=utf-8 number ruler showcmd showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
+    set autoread cmdheight=2 encoding=utf-8 number ruler showcmd
+    set showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
