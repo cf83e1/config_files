@@ -19,7 +19,7 @@ set modelines=0
         nnoremap <silent> <leader>t :tabnew<CR>
         nnoremap <silent> <leader>w :set wrap!<CR>
     nnoremap ; :
-    inoremap jj <Esc>
+    inoremap jj <ESC>
     nnoremap j gj
     nnoremap k gk
     nnoremap <silent> <tab> :tabn<CR>
