@@ -7,23 +7,25 @@ set modelines=0
     set list listchars=eol:$,nbsp:_,tab:>\ ,trail:@
 " Searching options
     set hlsearch ignorecase incsearch showmatch smartcase
-" Movement
-    nnoremap j gj
-    nnoremap k gk
 " Indenting
     set autoindent smartindent
     set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 " Custom mappings
     let mapleader=","
         nnoremap <silent> <leader><space> :nohlsearch<CR>
-        nnoremap <silent> K <C-^>
         nnoremap <silent> <leader>l :set list!<CR>
         nnoremap <silent> <leader>p :set paste!<CR>
         nnoremap <silent> <leader>s :set spell!<CR>
         nnoremap <silent> <leader>t :tabnew<CR>
         nnoremap <silent> <leader>w :set wrap!<CR>
     nnoremap ; :
+    inoremap jj <Esc>
+    nnoremap j gj
+    nnoremap k gk
     nnoremap <silent> <tab> :tabn<CR>
+    nnoremap <silent> <s-tab> :tabp<CR>
+    nmap <space> <C-f>
+    nnoremap <silent> K <C-^>
 " Commands and abbreviations to allow things like :WQ!<CR> and :Wq
 " file.txt<CR>. Using commands alone is not enough when files are
 " specified because of 'E488: Trailing characters'. However, using
