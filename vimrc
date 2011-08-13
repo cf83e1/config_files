@@ -16,6 +16,7 @@ set modelines=0
 " custom mappings
     let mapleader=","
         nnoremap <silent> <leader><space> :nohlsearch<CR>
+        nnoremap <silent> K <C-^>
         nnoremap <silent> <leader>l :set list!<CR>
         nnoremap <silent> <leader>p :set paste!<CR>
         nnoremap <silent> <leader>s :set spell!<CR>
@@ -23,4 +24,10 @@ set modelines=0
         nnoremap <silent> <leader>w :set wrap!<CR>
     nnoremap ; :
     nnoremap <silent> <tab> :tabn<CR>
-set autoread cmdheight=2 encoding=utf-8 number ruler showcmd showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
+" custom commands
+    :command WQ wq
+    :command Wq wq
+    :command W w
+    :command Q q
+" other options
+    set autoread cmdheight=2 encoding=utf-8 number ruler showcmd showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
