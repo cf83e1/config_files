@@ -25,9 +25,9 @@ set modelines=0
     nnoremap ; :
     nnoremap <silent> <tab> :tabn<CR>
 " custom commands
-    :command WQ wq
-    :command Wq wq
-    :command W w
-    :command Q q
+    :command -bang WQ wq<bang>
+    :command -bang Wq wq<bang>
+    :command -bang W w<bang>
+    :command -bang Q q<bang>
 " other options
     set autoread cmdheight=2 encoding=utf-8 number ruler showcmd showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
