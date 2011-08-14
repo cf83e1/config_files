@@ -11,7 +11,7 @@ set modelines=0
     set autoindent smartindent
     set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 " Custom mappings
-    let mapleader=","
+    let mapleader=','
         nnoremap <silent> <leader><space> :nohlsearch<CR>
         nnoremap <silent> <leader>l :set list!<CR>
         nnoremap <silent> <leader>p :set paste!<CR>
@@ -51,3 +51,4 @@ set modelines=0
 " Other options
     set autoread cmdheight=2 encoding=utf-8 number ruler showcmd
     set showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
+    set hidden title scrolloff=1000 backspace=indent,eol,start
