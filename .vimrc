@@ -47,6 +47,7 @@ set modelines=0
     " These allow for things like :W file.txt<CR> and
     " :WQ! file.txt<CR>
         cnoreabbrev q1 q!
+        cnoreabbrev Q1 q!
         cnoreabbrev Q q
         cnoreabbrev W w
         cnoreabbrev Wq wq
