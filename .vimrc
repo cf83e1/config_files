@@ -25,8 +25,10 @@ set modelines=0
     nnoremap k gk
     nnoremap <silent> <tab> :tabn<CR>
     nnoremap <silent> <s-tab> :tabp<CR>
-    nmap <space> <C-f>
+    nmap <space>j <C-f>
+    nmap <space>k <C-b>
     nnoremap <silent> K <C-^>
+
 " Commands and abbreviations to allow things like :WQ!<CR> and :Wq
 " file.txt<CR>. Using commands alone is not enough when files are
 " specified because of 'E488: Trailing characters'. However, using
@@ -34,6 +36,7 @@ set modelines=0
 " not convert words unless there is a trailing space or bang. (So
 " :WQ<CR> would not work with just abbreviations.) Using both commands
 " and abbreviations solves the problem for all cases.
+
     " Commands
     " These allow for things like :WQ<CR> and :Q!<CR>
         :command -bang Q q<bang>
@@ -52,4 +55,4 @@ set modelines=0
 " Other options
     set autoread cmdheight=2 encoding=utf-8 number ruler showcmd
     set showmode nospell spellfile=~/.spell.en.add ttyfast wildmenu wrap
-    set hidden title scrolloff=1000 backspace=indent,eol,start
+    set hidden title backspace=indent,eol,start
